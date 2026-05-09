@@ -1,6 +1,10 @@
 # Banyan Distiller Smart
 
-Banyan Distiller Smart converts external information into Banyan Knowledge Packs using an embedded Ivy-0 runtime and a small local model for knowledge distillation.
+Banyan Distiller Smart converts external information into Banyan Knowledge Packs using Ivy-assisted execution and a small local model for knowledge distillation.
+
+Banyan is the proven memory brain in the InnoLotus AI stack. Ivy is the execution and problem-solving platform. Banyan Distiller Smart may use Ivy to improve distillation quality, but it remains a Banyan packaging tool and does not own general Ivy execution runtime, chat UI, or enterprise workflow orchestration.
+
+See [`docs/product-boundary.md`](./docs/product-boundary.md) for the product boundary.
 
 ## Scope
 
@@ -8,7 +12,7 @@ This is the smart edition of Banyan Distiller. It should provide higher-quality 
 
 Initial responsibilities:
 
-- Bundle or integrate Ivy-0: https://github.com/labacacia/Ivy-0
+- Integrate Ivy-0 as a controlled distillation execution kernel: https://github.com/labacacia/Ivy-0
 - Run a small model to transform source material into structured Banyan-native knowledge.
 - Extract facts, procedures, policies, entities, relations, citations, and confidence metadata.
 - Produce portable `.banyanpack` artifacts.
@@ -17,6 +21,10 @@ Initial responsibilities:
 ## Relationship To Banyan Distiller
 
 Banyan Distiller is the standard deterministic extraction and packaging tool. Banyan Distiller Smart adds model-assisted distillation on top of the same Knowledge Pack contract.
+
+## Relationship To Ivy
+
+Ivy helps plan, extract, classify, validate, and review knowledge during distillation. Banyan Distiller Smart owns the distillation workflow and `.banyanpack` output. General-purpose execution, chat interaction, and enterprise workflow automation belong to Ivy-0, Ivy-Chat, and Ivy-Work respectively.
 
 ## Relationship To Banyan
 
